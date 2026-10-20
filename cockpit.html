@@ -82,143 +82,25 @@
         C’est l’épopée de Voltaire et Platini jusqu’au fin fond de l’univers. La quête de deux Space Patrouilleurs, prêts à tout pour retrouver une légitimité au sein de la prestigieuse Flotte Universelle. Pour cela, ils vont devoir sortir des radars et prendre un maximum de risques.
       </p>
       <p class="text-[#8F8AB3] text-[15px] leading-relaxed max-w-md mx-auto">les 4 premiers épisodes vous sont proposés si vous voulez écouter la suite de l'histoire aller sur les plateformes de streaming (Spotify, Deezer, ...).</p>
+      <div class="mt-8 grid gap-4 text-left">
+        <article class="rounded-xl border border-[#6FE3F0]/20 bg-[#100E24]/70 p-4">
+          <h2 class="font-display text-sm text-white">01 · Nouvelle Naissance</h2>
+          <audio controls class="mt-3 w-full" src="audio/COCKPIT - S01E01 - Nouvelle Naissance.mp3"></audio>
+        </article>
+        <article class="rounded-xl border border-[#6FE3F0]/20 bg-[#100E24]/70 p-4">
+          <h2 class="font-display text-sm text-white">02 · Vuzz</h2>
+          <audio controls class="mt-3 w-full" src="audio/COCKPIT - S01E02 - Vuuz.mp3"></audio>
+        </article>
+        <article class="rounded-xl border border-[#6FE3F0]/20 bg-[#100E24]/70 p-4">
+          <h2 class="font-display text-sm text-white">03 · Maudit Naanfi !</h2>
+          <audio controls class="mt-3 w-full" src="audio/COCKPIT - S01E03 - Maudit Naanfi.mp3"></audio>
+        </article>
+        <article class="rounded-xl border border-[#6FE3F0]/20 bg-[#100E24]/70 p-4">
+          <h2 class="font-display text-sm text-white">04 · Rank</h2>
+          <audio controls class="mt-3 w-full" src="audio/COCKPIT - S01E04 - Rank.mp3"></audio>
+        </article>
+      </div>
     </header>
 
-    <ul id="episode-list" class="divide-y divide-[#201E3D]">
-      <!-- Un item est généré par épisode via JS, voir tableau EPISODES plus bas -->
-    </ul>
-
   </main>
-
-  <!-- Mini-lecteur persistant, façon panneau de contrôle -->
-  <div id="player-bar" class="fixed bottom-0 left-0 right-0 bg-[#100E24] border-t border-[#6FE3F0]/20 translate-y-full transition-transform duration-300">
-    <div class="max-w-2xl mx-auto px-6 py-4 flex items-center gap-4">
-      <button id="toggle-play" class="shrink-0 w-10 h-10 rounded-full border border-[#6FE3F0] flex items-center justify-center text-[#6FE3F0]">
-        <svg id="icon-play" class="w-4 h-4 translate-x-[1px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-        <svg id="icon-pause" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
-      </button>
-
-      <div class="min-w-0 flex-1">
-        <p id="now-title" class="font-display text-sm tracking-wide truncate">—</p>
-        <div class="flex items-center gap-2 mt-2">
-          <span id="time-current" class="font-hud text-[10px] text-[#8F8AB3] w-9">0:00</span>
-          <input id="seek" type="range" min="0" max="100" value="0" class="flex-1">
-          <span id="time-total" class="font-hud text-[10px] text-[#8F8AB3] w-9">0:00</span>
-        </div>
-      </div>
-
-      <audio id="audio-el"></audio>
-    </div>
-  </div>
-
-<script>
-  // Remplace ces données par tes vrais épisodes (src = URL du fichier audio)
-  const EPISODES = [
-    { id: 1, title: "Nouvelle Naissance",   desc: " ",           duration: "4:10", src: "C:\\Users\\lucas\\OneDrive\\Lucas\\loisir\\codage\\cockpit\\audio\\COCKPIT - S01E01 - Nouvelle Naissance.mp3" },
-    { id: 2, title: "Vuzz",                  desc: " ",                    duration: "3:36", src: "C:\\Users\\lucas\\OneDrive\\Lucas\\loisir\\codage\\cockpit\\audio\\COCKPIT - S01E02 - Vuuz.mp3" },
-    { id: 3, title: "Maudit Naanfi !",               desc: " ",               duration: "4:06", src: "C:\\Users\\lucas\\OneDrive\\Lucas\\loisir\\codage\\cockpit\\audio\\COCKPIT - S01E03 - Maudit Naanfi.mp3" },
-    { id: 4, title: "Rank",              desc: " ",             duration: "4:07", src: "C:\\Users\\lucas\\OneDrive\\Lucas\\loisir\\codage\\cockpit\\audio\\COCKPIT - S01E04 - Rank.mp3" },
-  ];
-
-  const list = document.getElementById('episode-list');
-  const audio = document.getElementById('audio-el');
-  const playerBar = document.getElementById('player-bar');
-  const toggleBtn = document.getElementById('toggle-play');
-  const iconPlay = document.getElementById('icon-play');
-  const iconPause = document.getElementById('icon-pause');
-  const nowTitle = document.getElementById('now-title');
-  const seek = document.getElementById('seek');
-  const timeCurrent = document.getElementById('time-current');
-  const timeTotal = document.getElementById('time-total');
-
-  let currentId = null;
-
-  function formatTime(s) {
-    if (!isFinite(s)) return "0:00";
-    const m = Math.floor(s / 60);
-    const sec = Math.floor(s % 60).toString().padStart(2, '0');
-    return `${m}:${sec}`;
-  }
-
-  function renderEpisodes() {
-    list.innerHTML = EPISODES.map((ep, i) => `
-      <li class="episode-row group" data-id="${ep.id}">
-        <button class="w-full flex items-center gap-5 py-5 text-left" data-play="${ep.id}">
-          <span class="font-hud text-[11px] text-[#8F8AB3] w-6 shrink-0">${String(i + 1).padStart(2, '0')}</span>
-
-          <span class="play-ring shrink-0 w-9 h-9 rounded-full border border-[#2E2B54] flex items-center justify-center transition-all">
-            <span class="wave-idle flex items-end gap-[2px] h-3 text-[#6FE3F0]" data-wave>
-              <span class="wave-bar h-1"></span><span class="wave-bar h-2"></span><span class="wave-bar h-3"></span><span class="wave-bar h-2"></span><span class="wave-bar h-1"></span>
-            </span>
-          </span>
-
-          <span class="min-w-0 flex-1">
-            <span class="block text-[15px] leading-snug">${ep.title}</span>
-            <span class="block text-[13px] text-[#8F8AB3] mt-1 truncate">${ep.desc}</span>
-          </span>
-
-          <span class="font-hud text-[11px] text-[#8F8AB3] shrink-0">${ep.duration}</span>
-        </button>
-      </li>
-    `).join('');
-
-    list.querySelectorAll('[data-play]').forEach(btn => {
-      btn.addEventListener('click', () => playEpisode(Number(btn.dataset.play)));
-    });
-  }
-
-  function setActiveRow(id) {
-    document.querySelectorAll('.episode-row').forEach(row => {
-      const isActive = Number(row.dataset.id) === id;
-      row.classList.toggle('is-active', isActive);
-      const wave = row.querySelector('[data-wave]');
-      wave.classList.toggle('wave-playing', isActive && !audio.paused);
-      wave.classList.toggle('wave-idle', !(isActive && !audio.paused));
-    });
-  }
-
-  function playEpisode(id) {
-    const ep = EPISODES.find(e => e.id === id);
-    if (!ep) return;
-    currentId = id;
-    nowTitle.textContent = ep.title;
-    playerBar.classList.remove('translate-y-full');
-
-    // Branche ici l'URL réelle du fichier audio (ep.src)
-    if (ep.src) {
-      audio.src = ep.src;
-      audio.play();
-    }
-    setActiveRow(id);
-    updatePlayIcon();
-  }
-
-  function updatePlayIcon() {
-    const playing = !audio.paused && currentId !== null;
-    iconPlay.classList.toggle('hidden', playing);
-    iconPause.classList.toggle('hidden', !playing);
-  }
-
-  toggleBtn.addEventListener('click', () => {
-    if (!currentId) return;
-    if (audio.paused) audio.play(); else audio.pause();
-  });
-
-  audio.addEventListener('play', () => { updatePlayIcon(); setActiveRow(currentId); });
-  audio.addEventListener('pause', () => { updatePlayIcon(); setActiveRow(currentId); });
-
-  audio.addEventListener('timeupdate', () => {
-    if (!audio.duration) return;
-    seek.value = (audio.currentTime / audio.duration) * 100;
-    timeCurrent.textContent = formatTime(audio.currentTime);
-    timeTotal.textContent = formatTime(audio.duration);
-  });
-
-  seek.addEventListener('input', () => {
-    if (!audio.duration) return;
-    audio.currentTime = (seek.value / 100) * audio.duration;
-  });
-
-  renderEpisodes();
-</script>
 </body>
