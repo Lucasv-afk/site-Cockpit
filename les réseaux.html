@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Portfolio de Mon nom - développeur web.">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+ <script src="https://cdn.tailwindcss.com"></script>
+  <title>Cockpit</title>
+</head>
+<body class="min-h-screen text-[#EDEBF7] pb-28">
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<header class="bg-gray-900">
+  <nav aria-label="Global" class="relative mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+        <span class="sr-only">Open main menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <el-popover-group class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-x-12 lg:flex">
+      <a href="C:\Users\lucas\OneDrive\Lucas\loisir\codage\cockpit\cockpit.html" class="text-sm/6 font-semibold text-white">Cockpit</a>
+      <a href="C:\Users\lucas\OneDrive\Lucas\loisir\codage\cockpit\altacchino.html" class="text-sm/6 font-semibold text-white">Altacchino</a>
+      <a href="C:\Users\lucas\OneDrive\Lucas\loisir\codage\cockpit\les réseaux.html" class="text-sm/6 font-semibold text-white">Les Réseaux</a>
+    </el-popover-group>
+  </nav>
+  <el-dialog>
+    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <div tabindex="0" class="fixed inset-0 focus:outline-none">
+        <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+            </a>
+            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-400">
+              <span class="sr-only">Close menu</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-white/10">
+              <div class="space-y-2 py-6">
+                <div class="-mx-3">
+                  <button type="button" command="--toggle" commandfor="products" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white/5">
+                    Product
+                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none in-aria-expanded:rotate-180">
+                      <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Features</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Marketplace</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Company</a>
+              </div>
+            </div>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+</header>
+
+<main class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+  <section class="grid gap-10 lg:grid-cols-[.85fr_1.15fr] lg:items-center">
+    <div>
+      <p class="font-hud text-xs font-semibold uppercase tracking-[0.35em] text-cyan-300">Centre de partage · réseau actif</p>
+      <h1 class="font-display mt-5 text-4xl font-bold tracking-tight text-white sm:text-6xl">Retrouve Altacchino partout.</h1>
+      <p class="mt-5 max-w-xl text-lg leading-8 text-slate-300">Un espace pour suivre ses projets, échanger avec une communauté de passionnés.</p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="https://www.instagram.com/altacchino/" target="_blank" rel="noreferrer" class="rounded-lg bg-cyan-300 px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-200">Instagram</a>
+        <a href="https://www.youtube.com/@Altacchino" target="_blank" rel="noreferrer" class="rounded-lg border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-cyan-300 hover:text-cyan-300">YouTube</a>
+        <a href="https://www.tiktok.com/@altacchino" target="_blank" rel="noreferrer" class="rounded-lg border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-cyan-300 hover:text-cyan-300">TikTok</a>
+        <a href="https://www.linkedin.com/in/alexandre-tacchino-74a783266" target="_blank" rel="noreferrer" class="rounded-lg border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-cyan-300 hover:text-cyan-300">LinkedIn</a>
+        <a href="https://www.twitch.tv/altacchino" target="_blank" rel="noreferrer" class="rounded-lg border border-white/20 px-5 py-3 text-sm font-bold text-white transition hover:border-violet-300 hover:text-violet-300">Twitch</a>
+      </div>
+    </div>
+    <div class="relative overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60 p-6 shadow-2xl shadow-cyan-950/30 sm:p-8">
+      <div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-cyan-300/10 blur-3xl"></div>
+      <div class="relative flex items-center gap-5">
+        <div class="flex h-20 w-20 shrink-0 items-center justify-center rounded-full border-2 border-cyan-300 bg-cyan-300/10 font-display text-2xl font-bold text-cyan-300">AT</div>
+        <div>
+          <p class="font-hud text-xs uppercase tracking-widest text-cyan-300">Profil vérifié</p>
+          <h2 class="mt-2 text-2xl font-semibold text-white">Alexandre Tacchino</h2>
+          <p class="mt-1 text-sm text-slate-400">Réalisateur · créateur · @altacchino</p>
+        </div>
+      </div>
+      <div class="relative mt-8 grid grid-cols-3 divide-x divide-white/10 text-center">
+        <div><p class="font-hud text-xl font-bold text-white">+550 K</p><p class="mt-1 text-xs uppercase tracking-widest text-slate-500">abonnés</p></div>
+        <div><p class="font-hud text-xl font-bold text-white">~500</p><p class="mt-1 text-xs uppercase tracking-widest text-slate-500">publications</p></div>
+        <div><p class="font-hud text-xl font-bold text-white">4,9/5</p><p class="mt-1 text-xs uppercase tracking-widest text-slate-500">engagement</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-20">
+    <div class="flex flex-col justify-between gap-4 border-b border-white/10 pb-5 sm:flex-row sm:items-end">
+      <div><p class="font-hud text-xs uppercase tracking-[0.3em] text-cyan-300">Canaux disponibles</p><h2 class="font-display mt-3 text-2xl font-bold text-white">Choisis ton point d’entrée</h2></div>
+      <p class="text-sm text-slate-400">Retrouve ton créateur préféré sur ses réseaux sociaux.</p>
+    </div>
+    <div class="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+      <a href="https://www.instagram.com/altacchino/" target="_blank" rel="noreferrer" class="group rounded-xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-pink-300/50 hover:bg-pink-300/10">
+        <p class="font-hud text-2xl font-bold text-pink-300">◎</p><h3 class="mt-5 text-lg font-semibold text-white">Instagram</h3><p class="mt-2 text-sm leading-6 text-slate-400">histoire, photos et vidéos.</p><span class="mt-5 inline-block text-sm font-semibold text-pink-300">@altacchino →</span>
+      </a>
+      <a href="https://www.youtube.com/@Altacchino" target="_blank" rel="noreferrer" class="group rounded-xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-red-300/50 hover:bg-red-300/10">
+        <p class="font-hud text-2xl font-bold text-red-300">▶</p><h3 class="mt-5 text-lg font-semibold text-white">YouTube</h3><p class="mt-2 text-sm leading-6 text-slate-400">histoire, photos et vidéos.</p><span class="mt-5 inline-block text-sm font-semibold text-red-300">@altacchino →</span>
+      </a>
+      <a href="https://www.tiktok.com/@altacchino" target="_blank" rel="noreferrer" class="group rounded-xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-cyan-300/50 hover:bg-cyan-300/10">
+        <p class="font-hud text-2xl font-bold text-cyan-300">♪</p><h3 class="mt-5 text-lg font-semibold text-white">TikTok</h3><p class="mt-2 text-sm leading-6 text-slate-400">histoire, photos et vidéos.</p><span class="mt-5 inline-block text-sm font-semibold text-cyan-300">@altacchino →</span>
+      </a>
+      <a href="https://www.linkedin.com/in/alexandre-tacchino-74a783266" target="_blank" rel="noreferrer" class="group rounded-xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-blue-300/50 hover:bg-blue-300/10">
+        <p class="font-hud text-2xl font-bold text-blue-300">in</p><h3 class="mt-5 text-lg font-semibold text-white">LinkedIn</h3><p class="mt-2 text-sm leading-6 text-slate-400">Projets professionnels, collaborations et actualités.</p><span class="mt-5 inline-block text-sm font-semibold text-blue-300">@altacchino →</span>
+      </a>
+      <a href="https://www.twitch.tv/altacchino" target="_blank" rel="noreferrer" class="group rounded-xl border border-white/10 bg-white/[0.04] p-6 transition hover:-translate-y-1 hover:border-violet-300/50 hover:bg-violet-300/10">
+        <p class="font-hud text-2xl font-bold text-violet-300">◆</p><h3 class="mt-5 text-lg font-semibold text-white">Twitch</h3><p class="mt-2 text-sm leading-6 text-slate-400">Lives, échanges avec la communauté et coulisses.</p><span class="mt-5 inline-block text-sm font-semibold text-violet-300">@altacchino →</span>
+      </a>
+    </div>
+  </section>
+
+  <section class="mt-20 grid gap-8 lg:grid-cols-[1.15fr_.85fr]">
+    <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
+      <div class="flex flex-col justify-between gap-4 border-b border-white/10 pb-5 sm:flex-row sm:items-end">
+        <div>
+          <p class="font-hud text-xs uppercase tracking-[0.3em] text-cyan-300">transmissions</p>
+          <h2 class="font-display mt-3 text-2xl font-bold text-white">À voir</h2>
+        </div>
+        <span class="w-fit rounded-full bg-cyan-300/10 px-3 py-1 text-xs font-semibold text-cyan-300">3 contenus</span>
+      </div>
+      <div class="divide-y divide-white/10">
+        <article class="flex gap-4 py-5 first:pt-6">
+          <span class="font-hud text-sm text-cyan-300">01</span>
+          <div class="min-w-0 flex-1"><h3 class="font-semibold text-white">De Neuilly sa mère aux tréfonds du web</h3><p class="mt-1 text-sm leading-6 text-slate-400">De son rôle dans le cinéma français à la création de contenu sur internet.</p></div>
+          <span class="shrink-0 text-xs text-slate-500">18:44</span>
+        </article>
+        <article class="flex gap-4 py-5">
+          <span class="font-hud text-sm text-cyan-300">02</span>
+          <div class="min-w-0 flex-1"><h3 class="font-semibold text-white">Ma grand-mère a un secret</h3><p class="mt-1 text-sm leading-6 text-slate-400">Des souvenirs retrouvés à travers d'anciens enregistrements au dictaphone.</p></div>
+          <span class="shrink-0 text-xs text-slate-500">18:30</span>
+        </article>
+        <article class="flex gap-4 py-5 last:pb-0">
+          <span class="font-hud text-sm text-cyan-300">03</span>
+          <div class="min-w-0 flex-1"><h3 class="font-semibold text-white">Je retrouve mes amis de CP, 26 ans plus tard</h3><p class="mt-1 text-sm leading-6 text-slate-400">Une vieille photo de classe et les réseaux sociaux comme seuls indices.</p></div>
+          <span class="shrink-0 text-xs text-slate-500">1:29:57</span>
+        </article>
+      </div>
+    </div>
+    <div class="flex flex-col justify-between rounded-2xl border border-cyan-300/20 bg-cyan-300/10 p-6 sm:p-8">
+      <div>
+        <p class="font-hud text-xs uppercase tracking-[0.3em] text-cyan-300">Communauté</p>
+        <h2 class="font-display mt-3 text-2xl font-bold text-white">Un projet à partager ?</h2>
+        <p class="mt-4 leading-7 text-slate-300">Retrouve les annonces, les collaborations et les discussions autour de la création audiovisuelle.</p>
+      </div>
+      <a href="https://www.linkedin.com/in/alexandre-tacchino-74a783266" class="mt-8 inline-flex w-fit rounded-lg bg-white px-5 py-3 text-sm font-bold text-slate-950 transition hover:bg-cyan-100">Prendre contact <span class="ml-2" aria-hidden="true">→</span></a>
+    </div>
+  </section>
+</main>
+</body>
+</html>

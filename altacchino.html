@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Portfolio de Mon nom - développeur web.">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+ <script src="https://cdn.tailwindcss.com"></script>
+  <title>Cockpit</title>
+</head>
+<body class="min-h-screen text-[#EDEBF7] pb-28">
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<header class="bg-gray-900">
+  <nav aria-label="Global" class="relative mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+        <span class="sr-only">Open main menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <el-popover-group class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-x-12 lg:flex">
+      <a href="C:\Users\lucas\OneDrive\Lucas\loisir\codage\cockpit\cockpit.html" class="text-sm/6 font-semibold text-white">Cockpit</a>
+      <a href="C:\Users\lucas\OneDrive\Lucas\loisir\codage\cockpit\altacchino.html" class="text-sm/6 font-semibold text-white">Altacchino</a>
+      <a href="C:\Users\lucas\OneDrive\Lucas\loisir\codage\cockpit\les réseaux.html" class="text-sm/6 font-semibold text-white">Les Réseaux</a>
+    </el-popover-group>
+  </nav>
+  <el-dialog>
+    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <div tabindex="0" class="fixed inset-0 focus:outline-none">
+        <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+            </a>
+            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-400">
+              <span class="sr-only">Close menu</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-white/10">
+              <div class="space-y-2 py-6">
+                <div class="-mx-3">
+                  <button type="button" command="--toggle" commandfor="products" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white/5">
+                    Product
+                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none in-aria-expanded:rotate-180">
+                      <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Features</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Marketplace</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Company</a>
+              </div>
+            </div>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+</header>
+
+<main class="mx-auto max-w-7xl px-6 py-12 lg:px-8">
+  <section class="grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
+    <div>
+      <p class="font-hud text-xs font-semibold uppercase tracking-[0.35em] text-cyan-300">Dossier de carrière · ALT-07</p>
+      <h1 class="font-display mt-5 max-w-3xl text-4xl font-bold tracking-tight text-white sm:text-6xl">Alexandre Tacchino</h1>
+      <p class="mt-5 max-w-2xl text-lg leading-8 text-slate-300">Créateur de contenu, Auteur et Directeur Artistique, Alexandre fait vivre des histoires au traver de l'audio. Son parcours relie les plateaux de tournage aux tréfonds du web.</p>
+      <div class="mt-8 flex flex-wrap gap-3 text-sm text-slate-200">
+        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2">Cinéma</span>
+        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2">série audio</span>
+        <span class="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-4 py-2">Réseaux sociaux</span>
+      </div>
+    </div>
+    <div class="overflow-hidden rounded-2xl border border-white/10 bg-slate-950/60 shadow-2xl shadow-cyan-950/30">
+      <img src="data:image/webp;base64,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" alt="Une salle de cinéma avec un écran lumineux" class="h-64 w-full object-cover opacity-80 lg:h-72" />
+      <div class="grid grid-cols-3 divide-x divide-white/10 px-5 py-5 text-center">
+        <div><p class="font-hud text-2xl font-bold text-cyan-300">11</p><p class="mt-1 text-xs uppercase tracking-widest text-slate-400">ans de carrière</p></div>
+        <div><p class="font-hud text-2xl font-bold text-cyan-300">19</p><p class="mt-1 text-xs uppercase tracking-widest text-slate-400">films réalisés</p></div>
+        <div><p class="font-hud text-2xl font-bold text-cyan-300">+550 K</p><p class="mt-1 text-xs uppercase tracking-widest text-slate-400">abonnés</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-20 grid gap-12 lg:grid-cols-[.7fr_1.3fr]">
+    <div>
+      <p class="font-hud text-xs uppercase tracking-[0.3em] text-cyan-300">Parcours</p>
+      <h2 class="font-display mt-3 text-2xl font-bold text-white">Du plateau au tréfond du web</h2>
+      <p class="mt-4 leading-7 text-slate-400">De ses premiers téléfilms à ses histoires audio, chaque étape a rapproché ALtachino de son objectif : sortir du rôle d'acteur de téléfilms.</p>
+    </div>
+    <div class="relative border-l border-cyan-300/30 pl-8">
+      <div class="relative pb-10">
+        <span class="absolute -left-[2.35rem] top-1 h-3 w-3 rounded-full bg-cyan-300 shadow-[0_0_14px_rgba(103,232,249,.8)]"></span>
+        <p class="font-hud text-xs font-semibold uppercase tracking-widest text-cyan-300">2011 — 2021</p>
+        <h3 class="mt-2 text-xl font-semibold text-white">carrière sur les plateaux</h3>
+        <p class="mt-2 leading-7 text-slate-400">10 ans de carrière sur les plateaux de télévision et du cinéma en tant qu'acteur.</p>
+      </div>
+      <div class="relative pb-10">
+        <span class="absolute -left-[2.35rem] top-1 h-3 w-3 rounded-full border-2 border-cyan-300 bg-slate-950"></span>
+        <p class="font-hud text-xs font-semibold uppercase tracking-widest text-cyan-300">2021</p>
+        <h3 class="mt-2 text-xl font-semibold text-white">les débuts dans la création</h3>
+        <p class="mt-2 leading-7 text-slate-400">Il débute son aventure sur internet en créant des histoires.</p>
+      </div>
+      <div class="relative">
+        <span class="absolute -left-[2.35rem] top-1 h-3 w-3 rounded-full border-2 border-cyan-300 bg-slate-950"></span>
+        <p class="font-hud text-xs font-semibold uppercase tracking-widest text-cyan-300">Quelques 500 k followers plus tard</p>
+        <h3 class="mt-2 text-xl font-semibold text-white">la série audio</h3>
+        <p class="mt-2 leading-7 text-slate-400">après avoir construit une communauté active, il lance sa série audio qu'il nomme "cockpit".</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mt-20 border-t border-white/10 pt-10">
+    <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+      <div><p class="font-hud text-xs uppercase tracking-[0.3em] text-cyan-300">Cap actuel</p><h2 class="font-display mt-3 text-2xl font-bold text-white">Ce qui guide sa création</h2></div>
+      <p class="max-w-md text-sm leading-6 text-slate-400">« écoutez et laissez vôtre imagination prendre le relais. »</p>
+    </div>
+    <div class="mt-8 grid gap-4 md:grid-cols-3">
+      <article class="rounded-xl border border-white/10 bg-white/[0.04] p-6"><p class="font-hud text-sm text-cyan-300">01 / Passion</p><h3 class="mt-4 text-lg font-semibold text-white">Raconter des histoires</h3><p class="mt-2 text-sm leading-6 text-slate-400">Créer des histoires captivantes qui inspirent et touchent les auditeurs.</p></article>
+      <article class="rounded-xl border border-white/10 bg-white/[0.04] p-6"><p class="font-hud text-sm text-cyan-300">02 / Inspiration</p><h3 class="mt-4 text-lg font-semibold text-white">l'imaginaire</h3><p class="mt-2 text-sm leading-6 text-slate-400">faire des histoires qui dépassent la réalité.</p></article>
+      <article class="rounded-xl border border-white/10 bg-white/[0.04] p-6"><p class="font-hud text-sm text-cyan-300">03 / Transmission</p><h3 class="mt-4 text-lg font-semibold text-white">transmettre sa penser</h3><p class="mt-2 text-sm leading-6 text-slate-400">transmettre ses idées et ses valeurs aux auditeurs.</p></article>
+    </div>
+  </section>
+</main>
+</body>
+</html>

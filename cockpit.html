@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Portfolio de Mon nom - développeur web.">
+  <!-- <link rel="stylesheet" href="style.css"> -->
+ <script src="https://cdn.tailwindcss.com"></script>
+  <title>Cockpit</title>
+</head>
+<body class="min-h-screen text-[#EDEBF7] pb-28">
+    <!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<header class="bg-gray-900">
+  <nav aria-label="Global" class="relative mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8">
+    <div class="flex lg:flex-1">
+      <a href="#" class="-m-1.5 p-1.5">
+        <span class="sr-only">Your Company</span>
+        <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+      </a>
+    </div>
+    <div class="flex lg:hidden">
+      <button type="button" command="show-modal" commandfor="mobile-menu" class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400">
+        <span class="sr-only">Open main menu</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+          <path d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <el-popover-group class="absolute left-1/2 hidden -translate-x-1/2 items-center gap-x-12 lg:flex">
+      <a href="C:\Users\lucas\OneDrive\Lucas\loisir\codage\cockpit\cockpit.html" class="text-sm/6 font-semibold text-white">Cockpit</a>
+      <a href="C:\Users\lucas\OneDrive\Lucas\loisir\codage\cockpit\altacchino.html" class="text-sm/6 font-semibold text-white">Altacchino</a>
+      <a href="C:\Users\lucas\OneDrive\Lucas\loisir\codage\cockpit\les réseaux.html" class="text-sm/6 font-semibold text-white">Les Réseaux</a>
+    </el-popover-group>
+  </nav>
+  <el-dialog>
+    <dialog id="mobile-menu" class="backdrop:bg-transparent lg:hidden">
+      <div tabindex="0" class="fixed inset-0 focus:outline-none">
+        <el-dialog-panel class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-gray-900 p-6 sm:max-w-sm sm:ring-1 sm:ring-gray-100/10">
+          <div class="flex items-center justify-between">
+            <a href="#" class="-m-1.5 p-1.5">
+              <span class="sr-only">Your Company</span>
+              <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="" class="h-8 w-auto" />
+            </a>
+            <button type="button" command="close" commandfor="mobile-menu" class="-m-2.5 rounded-md p-2.5 text-gray-400">
+              <span class="sr-only">Close menu</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" data-slot="icon" aria-hidden="true" class="size-6">
+                <path d="M6 18 18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+          </div>
+          <div class="mt-6 flow-root">
+            <div class="-my-6 divide-y divide-white/10">
+              <div class="space-y-2 py-6">
+                <div class="-mx-3">
+                  <button type="button" command="--toggle" commandfor="products" class="flex w-full items-center justify-between rounded-lg py-2 pr-3.5 pl-3 text-base/7 font-semibold text-white hover:bg-white/5">
+                    Product
+                    <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true" class="size-5 flex-none in-aria-expanded:rotate-180">
+                      <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />
+                    </svg>
+                  </button>
+                </div>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Features</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Marketplace</a>
+                <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-white hover:bg-white/5">Company</a>
+              </div>
+            </div>
+          </div>
+        </el-dialog-panel>
+      </div>
+    </dialog>
+  </el-dialog>
+</header>
+
+
+  <main class="max-w-2xl mx-auto px-6 pt-16">
+
+    <header class="mb-14 text-center">
+      <p class="font-hud text-[11px] tracking-[0.3em] text-[#8F8AB3] mb-4">ALTACCHINO — ÉMISSION</p>
+      <h1 class="font-display text-5xl font-medium tracking-[0.08em] mb-4" style="text-shadow: 0 0 22px rgba(111,227,240,0.35);">COCKPIT</h1>
+      <p class="text-[#8F8AB3] text-[15px] leading-relaxed max-w-md mx-auto">
+        C’est l’épopée de Voltaire et Platini jusqu’au fin fond de l’univers. La quête de deux Space Patrouilleurs, prêts à tout pour retrouver une légitimité au sein de la prestigieuse Flotte Universelle. Pour cela, ils vont devoir sortir des radars et prendre un maximum de risques.
+      </p>
+      <p class="text-[#8F8AB3] text-[15px] leading-relaxed max-w-md mx-auto">les 4 premiers épisodes vous sont proposés si vous voulez écouter la suite de l'histoire aller sur les plateformes de streaming (Spotify, Deezer, ...).</p>
+    </header>
+
+    <ul id="episode-list" class="divide-y divide-[#201E3D]">
+      <!-- Un item est généré par épisode via JS, voir tableau EPISODES plus bas -->
+    </ul>
+
+  </main>
+
+  <!-- Mini-lecteur persistant, façon panneau de contrôle -->
+  <div id="player-bar" class="fixed bottom-0 left-0 right-0 bg-[#100E24] border-t border-[#6FE3F0]/20 translate-y-full transition-transform duration-300">
+    <div class="max-w-2xl mx-auto px-6 py-4 flex items-center gap-4">
+      <button id="toggle-play" class="shrink-0 w-10 h-10 rounded-full border border-[#6FE3F0] flex items-center justify-center text-[#6FE3F0]">
+        <svg id="icon-play" class="w-4 h-4 translate-x-[1px]" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        <svg id="icon-pause" class="w-4 h-4 hidden" viewBox="0 0 24 24" fill="currentColor"><path d="M6 5h4v14H6zM14 5h4v14h-4z"/></svg>
+      </button>
+
+      <div class="min-w-0 flex-1">
+        <p id="now-title" class="font-display text-sm tracking-wide truncate">—</p>
+        <div class="flex items-center gap-2 mt-2">
+          <span id="time-current" class="font-hud text-[10px] text-[#8F8AB3] w-9">0:00</span>
+          <input id="seek" type="range" min="0" max="100" value="0" class="flex-1">
+          <span id="time-total" class="font-hud text-[10px] text-[#8F8AB3] w-9">0:00</span>
+        </div>
+      </div>
+
+      <audio id="audio-el"></audio>
+    </div>
+  </div>
+
+<script>
+  // Remplace ces données par tes vrais épisodes (src = URL du fichier audio)
+  const EPISODES = [
+    { id: 1, title: "Nouvelle Naissance",   desc: " ",           duration: "4:10", src: "C:\\Users\\lucas\\OneDrive\\Lucas\\loisir\\codage\\cockpit\\audio\\COCKPIT - S01E01 - Nouvelle Naissance.mp3" },
+    { id: 2, title: "Vuzz",                  desc: " ",                    duration: "3:36", src: "C:\\Users\\lucas\\OneDrive\\Lucas\\loisir\\codage\\cockpit\\audio\\COCKPIT - S01E02 - Vuuz.mp3" },
+    { id: 3, title: "Maudit Naanfi !",               desc: " ",               duration: "4:06", src: "C:\\Users\\lucas\\OneDrive\\Lucas\\loisir\\codage\\cockpit\\audio\\COCKPIT - S01E03 - Maudit Naanfi.mp3" },
+    { id: 4, title: "Rank",              desc: " ",             duration: "4:07", src: "C:\\Users\\lucas\\OneDrive\\Lucas\\loisir\\codage\\cockpit\\audio\\COCKPIT - S01E04 - Rank.mp3" },
+  ];
+
+  const list = document.getElementById('episode-list');
+  const audio = document.getElementById('audio-el');
+  const playerBar = document.getElementById('player-bar');
+  const toggleBtn = document.getElementById('toggle-play');
+  const iconPlay = document.getElementById('icon-play');
+  const iconPause = document.getElementById('icon-pause');
+  const nowTitle = document.getElementById('now-title');
+  const seek = document.getElementById('seek');
+  const timeCurrent = document.getElementById('time-current');
+  const timeTotal = document.getElementById('time-total');
+
+  let currentId = null;
+
+  function formatTime(s) {
+    if (!isFinite(s)) return "0:00";
+    const m = Math.floor(s / 60);
+    const sec = Math.floor(s % 60).toString().padStart(2, '0');
+    return `${m}:${sec}`;
+  }
+
+  function renderEpisodes() {
+    list.innerHTML = EPISODES.map((ep, i) => `
+      <li class="episode-row group" data-id="${ep.id}">
+        <button class="w-full flex items-center gap-5 py-5 text-left" data-play="${ep.id}">
+          <span class="font-hud text-[11px] text-[#8F8AB3] w-6 shrink-0">${String(i + 1).padStart(2, '0')}</span>
+
+          <span class="play-ring shrink-0 w-9 h-9 rounded-full border border-[#2E2B54] flex items-center justify-center transition-all">
+            <span class="wave-idle flex items-end gap-[2px] h-3 text-[#6FE3F0]" data-wave>
+              <span class="wave-bar h-1"></span><span class="wave-bar h-2"></span><span class="wave-bar h-3"></span><span class="wave-bar h-2"></span><span class="wave-bar h-1"></span>
+            </span>
+          </span>
+
+          <span class="min-w-0 flex-1">
+            <span class="block text-[15px] leading-snug">${ep.title}</span>
+            <span class="block text-[13px] text-[#8F8AB3] mt-1 truncate">${ep.desc}</span>
+          </span>
+
+          <span class="font-hud text-[11px] text-[#8F8AB3] shrink-0">${ep.duration}</span>
+        </button>
+      </li>
+    `).join('');
+
+    list.querySelectorAll('[data-play]').forEach(btn => {
+      btn.addEventListener('click', () => playEpisode(Number(btn.dataset.play)));
+    });
+  }
+
+  function setActiveRow(id) {
+    document.querySelectorAll('.episode-row').forEach(row => {
+      const isActive = Number(row.dataset.id) === id;
+      row.classList.toggle('is-active', isActive);
+      const wave = row.querySelector('[data-wave]');
+      wave.classList.toggle('wave-playing', isActive && !audio.paused);
+      wave.classList.toggle('wave-idle', !(isActive && !audio.paused));
+    });
+  }
+
+  function playEpisode(id) {
+    const ep = EPISODES.find(e => e.id === id);
+    if (!ep) return;
+    currentId = id;
+    nowTitle.textContent = ep.title;
+    playerBar.classList.remove('translate-y-full');
+
+    // Branche ici l'URL réelle du fichier audio (ep.src)
+    if (ep.src) {
+      audio.src = ep.src;
+      audio.play();
+    }
+    setActiveRow(id);
+    updatePlayIcon();
+  }
+
+  function updatePlayIcon() {
+    const playing = !audio.paused && currentId !== null;
+    iconPlay.classList.toggle('hidden', playing);
+    iconPause.classList.toggle('hidden', !playing);
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    if (!currentId) return;
+    if (audio.paused) audio.play(); else audio.pause();
+  });
+
+  audio.addEventListener('play', () => { updatePlayIcon(); setActiveRow(currentId); });
+  audio.addEventListener('pause', () => { updatePlayIcon(); setActiveRow(currentId); });
+
+  audio.addEventListener('timeupdate', () => {
+    if (!audio.duration) return;
+    seek.value = (audio.currentTime / audio.duration) * 100;
+    timeCurrent.textContent = formatTime(audio.currentTime);
+    timeTotal.textContent = formatTime(audio.duration);
+  });
+
+  seek.addEventListener('input', () => {
+    if (!audio.duration) return;
+    audio.currentTime = (seek.value / 100) * audio.duration;
+  });
+
+  renderEpisodes();
+</script>
+</body>
